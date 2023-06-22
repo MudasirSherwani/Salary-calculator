@@ -107,7 +107,36 @@
                     </li>                                           
                 </ul>                           
             </fieldset>                                             
-      
+            <fieldset>                                    
+                <div class="h3" id="source">SELECT THE WITHHOLDING TAX RATE: <span id="input-with-source-keypress"></span></div>                                                                       
+                <div id="sourceKeypress" style="clear:both;"></div>                    
+                                                          
+            </fieldset> 
+            <div class="h3">ESTIMATE OF YOUR NET SALARY AFTER WITHHOLDING TAX</div>                                             
+            <div class="container">    
+                <fieldset class="on">                               
+                    <ul class="prelsource">                                                               
+                        <li>                                                 
+                            <label for="net-mensuel">Net monthly after tax</label>                                                 
+                            <input type="text" disabled="disabled" name="net" id="net-mensuel-source" class="input" placeholder="Mensuel">                                             
+                        </li>                                                                                                                                                                                           
+                    </ul> 
+                </fieldset> 
+                <fieldset class="on">                                                                   
+                    <ul class="prelsource">  
+                        <li>                                                 
+                            <label for="net-annuel">Net annual after taxes</label>                                                 
+                            <input type="text" disabled="disabled" name="net" id="net-annuel-source" class="input" placeholder="Annuel">                                             
+                        </li>                                    
+                    </ul> 
+                </fieldset>
+            </div> 
+            <fieldset>                                    
+                <div class="h3" id="raz">Options :</div>                                    
+                <button id="reset">CLEAR</button>                    
+                                               
+            </fieldset>
+        </div>          
     </section>
 </div>
   </body>
