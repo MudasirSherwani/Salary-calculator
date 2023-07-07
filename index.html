@@ -1,1 +1,143 @@
-<h1>This is Salary Calcula as</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Salary Calculator</title>
+  </head>
+  <body>
+<div id="calculator" class="salaire_brut_net">          
+    <section id="salary">                   
+        <div class="container">                           
+            <fieldset class="on">                                
+                <h3>INDICATE YOUR GROSS SALARY</h3>                                    
+                <ul class="inp">                                             
+                    <li>                                                     
+                        <label for="brut-horaire">Gross schedule</label>                                                     
+                        <input type="text" name="brut" id="brut-horaire" class="input" placeholder="ex : 9.88">                                             
+                    </li>                                             
+                    <li>                                                      
+                        <label for="brut">Mensuel brut</label>                              
+                        <span id="statut">Non-cadre -22%</span>                                                      
+                        <input type="text" name="brut" id="brut-mensuel" class="input" placeholder="ex : 1498">                                             
+                    </li>                                             
+                    <li>                                                 
+                        <label for="brut-annuel">Gross annual</label>                                                 
+                        <input type="text" name="brut" id="brut-annuel" class="input" placeholder="ex : 17976">                                             
+                    </li>                                    
+                </ul>                          
+            </fieldset>                            
+            <fieldset class="on">                               
+                <h3>RESULT OF YOUR NET SALARY</h3>                                    
+                <ul class="inp">                                             
+                    <li>                                                 
+                        <label for="net-horaire">net schedule</label>                                                 
+                        <input type="text" name="net" id="net-horaire" class="input" placeholder="Horaire">                                             
+                    </li>                                             
+                    <li>                                                 
+                        <label for="net-mensuel">net monthly</label>                                                 
+                        <input type="text" name="net" id="net-mensuel" class="input" placeholder="Mensuel">                                             
+                    </li>                                             
+                    <li>                                                 
+                        <label for="net-annuel">net annual</label>                                                 
+                        <input type="text" name="net" id="net-annuel" class="input" placeholder="Annuel">                                             
+                    </li>                                    
+                </ul>                          
+            </fieldset>                                                                                       
+        </div>
+        <div class="container">                           
+            <fieldset class="large">                                    
+                <div class="h3">SELECT YOUR STATUS:</div>                                    
+                <ul class="list">                                                                      
+                    <li>                                                 
+                        <input type="radio" name="statut" id="salarienoncadre" value="0.22" checked>                                                                          
+                        <label for="salarienoncadre" class="radio">Non-executive employee</label>                                             
+                    </li>                                                            
+                    <li>                                                 
+                        <input type="radio" name="statut" id="salariecadre" value="0.25">                                                                        
+                        <label for="salariecadre" class="radio">Executive employee</label>                                             
+                    </li> 
+                    <li>                                                 
+                        <input type="radio" name="statut" id="fonctionpublique" value="0.15">                                                 
+                        <label for="fonctionpublique" class="radio">Public function</label>                                             
+                    </li>                                            
+                    <li>                                                 
+                        <input type="radio" name="statut" id="professionliberale" value="0.45" >                                                 
+                        <label for="professionliberale" class="radio">Liberal Professional</label>                                             
+                    </li>                                                         
+                    <li>                                                 
+                        <input type="radio" name="statut" id="portagesalarial" value="0.51" >                                                 
+                        <label for="portagesalarial" class="radio">Portage salarial</label>                                             
+                    </li>                                    
+                </ul>                           
+            </fieldset> 
+        </div>          
+    </section>          
+    <section id="parameters">                   
+        <div class="container">                                          
+            <fieldset class="keypress large">                                    
+                <div class="h3" id="worktime">SELECT YOUR WORKING TIME: <span id="input-with-worktime-keypress"></span></div>                                                                                        
+                <div id="worktimeKeypress" style="clear:both;"></div>                    
+                                                          
+            </fieldset> 
+            <fieldset class="mois_prime">                                    
+                <div class="h3">SELECT THE NUMBER OF CONVENTIONAL PREMIUM MONTHS:</div>                                    
+                <ul class="list">                                                 
+                    <li>                                                 
+                        <input type="radio" name="nombreMois" id="douzemois" value="12" checked >                                                                        
+                        <label for="douzemois" class="radio">12 months</label>                                             
+                    </li>                                             
+                    <li>                                                 
+                        <input type="radio" name="nombreMois" id="treizemois" value="13" >                                                                          
+                        <label for="treizemois" class="radio">13 months</label>                                             
+                    </li>                                                            
+                    <li>                                                 
+                        <input type="radio" name="nombreMois" id="quatorzemois" value="14" >                                                 
+                        <label for="quatorzemois" class="radio">14 months</label>                                             
+                    </li>                                                  
+                    <li>                                                 
+                        <input type="radio" name="nombreMois" id="quinzemois" value="15" >                                                 
+                        <label for="quinzemois" class="radio">15 months</label>                                             
+                    </li> 
+                    <li>                                                 
+                        <input type="radio" name="nombreMois" id="seizemois" value="16" >                                                 
+                        <label for="seizemois" class="radio">16 months</label>                                             
+                    </li>                                           
+                </ul>                           
+            </fieldset>                                             
+            <fieldset>                                    
+                <div class="h3" id="source">SELECT THE WITHHOLDING TAX RATE: <span id="input-with-source-keypress"></span></div>                                                                       
+                <div id="sourceKeypress" style="clear:both;"></div>                    
+                                                          
+            </fieldset> 
+            <div class="h3">ESTIMATE OF YOUR NET SALARY AFTER WITHHOLDING TAX</div>                                             
+            <div class="container">    
+                <fieldset class="on">                               
+                    <ul class="prelsource">                                                               
+                        <li>                                                 
+                            <label for="net-mensuel">Net monthly after tax</label>                                                 
+                            <input type="text" disabled="disabled" name="net" id="net-mensuel-source" class="input" placeholder="Mensuel">                                             
+                        </li>                                                                                                                                                                                           
+                    </ul> 
+                </fieldset> 
+                <fieldset class="on">                                                                   
+                    <ul class="prelsource">  
+                        <li>                                                 
+                            <label for="net-annuel">Net annual after taxes</label>                                                 
+                            <input type="text" disabled="disabled" name="net" id="net-annuel-source" class="input" placeholder="Annuel">                                             
+                        </li>                                    
+                    </ul> 
+                </fieldset>
+            </div> 
+            <fieldset>                                    
+                <div class="h3" id="raz">Options :</div>                                    
+                <button id="reset">CLEAR VALUES</button>                    
+                                               
+            </fieldset>
+        </div>          
+    </section>
+</div>
+  </body>
+</html>
